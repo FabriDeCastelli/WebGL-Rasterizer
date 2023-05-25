@@ -178,9 +178,10 @@
                 gl.clearColor(0.2, 0.2, 0.2, 1.0);
                 // clear the rendering area
                 gl.clear(gl.COLOR_BUFFER_BIT);
-
-                // Enable depth DEPTH_TEST
-        				gl.enable(gl.DEPTH_TEST);
+                
+                if(!switch_button)
+                    gl.enable(gl.CULL_FACE);
+        		gl.enable(gl.DEPTH_TEST);
                 //---------------------------------------------------
 
                 //----------------------------------------------------------------------------
